@@ -1,0 +1,137 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* outline: 1px solid black; */
+}
+
+:root {
+    --primary-txt-color: #171717
+    --secondary-txt-color: #EDEDED
+}
+
+body {
+    height: 100vh;
+    background-image: url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container {
+    width: 28vw;
+    height: 40vh;
+    padding: 4vh;
+    background-image: url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 8%;
+    animation: shadow 4s infinite;
+}
+
+.checkbox-container {
+    margin-left: 4px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+#showPassword {
+    margin-right: 4px;
+}
+  
+
+h1 {
+    padding: 2vh 0;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+
+#email, #password {
+    width: 20vw;
+    margin: 4px 0;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    border-radius: 12px;
+}
+
+#login {
+    width: 5vw;
+    margin: 16px;
+    padding: 1.3vh;
+    font-size: 16px;
+    background-color: black;
+    color: grey;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+#login:hover {
+    background-color: grey;
+    color: white;
+    box-shadow: 2px 2px 8px 1px #171717;
+    transition: all .4s ease-out;
+}
+
+
+@keyframes shadow {
+    0% {
+        box-shadow: -2px -2px 20px 4px #171717;
+    }
+    25% {
+        box-shadow: 2px -2px 20px 4px #171717;
+    }
+    50% {
+        box-shadow: 2px 2px 24px 4px #171717;
+    }
+    75% {
+        box-shadow: -2px 2px 20px 4px #171717;
+    }
+    100% {
+        box-shadow: -2px -2px 20px 4px #171717;
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        width: 40vw;
+        height: 40vh;
+    }
+    #email, #password {
+        width: 30vw;
+        padding: 12px;
+    }
+    #login {
+        width: 12vw;
+    }
+}
+
+@media (max-width: 528px) {
+    .container {
+        width: 80vw;
+        height: 40vh;
+    }
+    #email, #password {
+        width: 60vw;
+        padding: 12px;
+    }
+    #login {
+        width: 16vw;
+    }
+}
